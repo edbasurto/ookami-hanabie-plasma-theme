@@ -1,0 +1,13 @@
+[kdeglobals][Icons]
+Theme=HanabieNeonIcons
+
+[KDE]
+ColorScheme=HanabieColors
+LookAndFeelPackage=org.ookami.hanabie
+
+[LoginManager]
+Theme=eucalyptus-drop
+
+[org.kde.image][General]
+Image=hanabie-galaxy.jpg
+
