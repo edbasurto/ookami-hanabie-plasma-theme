@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <!-- Active titlebar gradient: dark with subtle pink tint -->
+    <linearGradient id="activeTitleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d3d3e"/>
+      <stop offset="100%" stop-color="#2a2a2b"/>
+    </linearGradient>
+    <!-- Inactive titlebar gradient -->
+    <linearGradient id="inactiveTitleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e2e2f"/>
+      <stop offset="100%" stop-color="#1e1e1f"/>
+    </linearGradient>
+    <!-- Active border: hot pink glow -->
+    <linearGradient id="activeBorderGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff80e0" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ff80e0" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ff80e0" stop-opacity="0.9"/>
+    </linearGradient>
+    <!-- Button hover gradient -->
+    <linearGradient id="btnHoverGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff80e0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff80e0" stop-opacity="0.1"/>
+    </linearGradient>
+    <!-- Close button hover -->
+    <linearGradient id="closeHoverGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8c1011" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#6a0c0d" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============================================================
+       TITLEBAR — active
+       KWin looks for id="decoration" as the base titlebar element.
+       The left/center/right split allows horizontal tiling.
+       ============================================================ -->
+  <g id="decoration">
+    <!-- left cap -->
+    <g id="decoration-left">
+      <rect width="6" height="36" fill="url(#activeTitleGrad)" rx="4" ry="4"/>
+      <!-- left border line -->
+      <rect x="0" y="4" width="2" height="28" fill="#ff80e0" opacity="0.7"/>
+    </g>
+    <!-- center (stretches) -->
+    <g id="decoration-center">
+      <rect width="244" height="36" fill="url(#activeTitleGrad)"/>
+      <!-- bottom separator with pink tint -->
+      <rect y="34" width="244" height="2" fill="#ff80e0" opacity="0.4"/>
+    </g>
+    <!-- right cap -->
+    <g id="decoration-right">
+      <rect width="6" height="36" fill="url(#activeTitleGrad)" rx="4" ry="4"/>
+      <rect x="4" y="4" width="2" height="28" fill="#ff80e0" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- TITLEBAR — inactive -->
+  <g id="decoration-inactive">
+    <g id="decoration-left-inactive">
+      <rect width="6" height="36" fill="url(#inactiveTitleGrad)" rx="4" ry="4"/>
+      <rect x="0" y="4" width="2" height="28" fill="#555555" opacity="0.5"/>
+    </g>
+    <g id="decoration-center-inactive">
+      <rect width="244" height="36" fill="url(#inactiveTitleGrad)"/>
+      <rect y="34" width="244" height="2" fill="#444444" opacity="0.5"/>
+    </g>
+    <g id="decoration-right-inactive">
+      <rect width="6" height="36" fill="url(#inactiveTitleGrad)" rx="4" ry="4"/>
+      <rect x="4" y="4" width="2" height="28" fill="#555555" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- ============================================================
+       BORDERS — active
+       ============================================================ -->
+  <!-- left border -->
+  <g id="border-left">
+    <rect width="4" height="100" fill="#2a2a2b"/>
+    <rect width="2" height="100" fill="#ff80e0" opacity="0.6"/>
+  </g>
+  <g id="border-left-inactive">
+    <rect width="4" height="100" fill="#1e1e1f"/>
+    <rect width="1" height="100" fill="#444444" opacity="0.5"/>
+  </g>
+
+  <!-- right border -->
+  <g id="border-right">
+    <rect width="4" height="100" fill="#2a2a2b"/>
+    <rect x="2" width="2" height="100" fill="#ff80e0" opacity="0.6"/>
+  </g>
+  <g id="border-right-inactive">
+    <rect width="4" height="100" fill="#1e1e1f"/>
+    <rect x="3" width="1" height="100" fill="#444444" opacity="0.5"/>
+  </g>
+
+  <!-- bottom border -->
+  <g id="border-bottom">
+    <rect width="100" height="6" fill="#2a2a2b"/>
+    <rect y="4" width="100" height="2" fill="#ff80e0" opacity="0.6"/>
+  </g>
+  <g id="border-bottom-inactive">
+    <rect width="100" height="6" fill="#1e1e1f"/>
+    <rect y="5" width="100" height="1" fill="#444444" opacity="0.5"/>
+  </g>
+
+  <!-- bottom-left corner -->
+  <g id="border-bottom-left">
+    <rect width="6" height="6" fill="#2a2a2b"/>
+    <rect x="0" y="4" width="2" height="2" fill="#ff80e0" opacity="0.6"/>
+    <rect x="0" y="4" width="6" height="2" fill="#ff80e0" opacity="0.6"/>
+  </g>
+  <g id="border-bottom-left-inactive">
+    <rect width="6" height="6" fill="#1e1e1f"/>
+  </g>
+
+  <!-- bottom-right corner -->
+  <g id="border-bottom-right">
+    <rect width="6" height="6" fill="#2a2a2b"/>
+    <rect x="4" y="4" width="2" height="2" fill="#ff80e0" opacity="0.6"/>
+    <rect x="0" y="4" width="6" height="2" fill="#ff80e0" opacity="0.6"/>
+  </g>
+  <g id="border-bottom-right-inactive">
+    <rect width="6" height="6" fill="#1e1e1f"/>
+  </g>
+
+  <!-- ============================================================
+       BUTTONS — Close (active / hover / pressed / inactive)
+       ============================================================ -->
+  <g id="close">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <line x1="5" y1="5" x2="13" y2="13" stroke="#ff80e0" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="13" y1="5" x2="5" y2="13" stroke="#ff80e0" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="close-hover">
+    <circle cx="9" cy="9" r="8" fill="#8c1011" stroke="#ff3333" stroke-width="1"/>
+    <line x1="5" y1="5" x2="13" y2="13" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="13" y1="5" x2="5" y2="13" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="close-pressed">
+    <circle cx="9" cy="9" r="8" fill="#6a0c0d" stroke="#cc2222" stroke-width="1"/>
+    <line x1="5" y1="5" x2="13" y2="13" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="13" y1="5" x2="5" y2="13" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="close-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <line x1="5" y1="5" x2="13" y2="13" stroke="#777777" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="13" y1="5" x2="5" y2="13" stroke="#777777" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============================================================
+       BUTTONS — Maximize
+       ============================================================ -->
+  <g id="maximize">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <rect x="5" y="5" width="8" height="8" fill="none" stroke="#ff80e0" stroke-width="1.5" rx="1"/>
+  </g>
+  <g id="maximize-hover">
+    <circle cx="9" cy="9" r="8" fill="url(#btnHoverGrad)" stroke="#ff80e0" stroke-width="1"/>
+    <rect x="5" y="5" width="8" height="8" fill="none" stroke="#ffffff" stroke-width="1.5" rx="1"/>
+  </g>
+  <g id="maximize-pressed">
+    <circle cx="9" cy="9" r="8" fill="#ff80e0" stroke="#ff80e0" stroke-width="1"/>
+    <rect x="5" y="5" width="8" height="8" fill="none" stroke="#1a1a1b" stroke-width="1.5" rx="1"/>
+  </g>
+  <g id="maximize-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <rect x="5" y="5" width="8" height="8" fill="none" stroke="#777777" stroke-width="1.5" rx="1"/>
+  </g>
+
+  <!-- Restore (when window is maximized) -->
+  <g id="restore">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <rect x="6" y="7" width="6" height="6" fill="none" stroke="#ff80e0" stroke-width="1.2" rx="1"/>
+    <rect x="4" y="5" width="6" height="6" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1.2" rx="1"/>
+  </g>
+  <g id="restore-hover">
+    <circle cx="9" cy="9" r="8" fill="url(#btnHoverGrad)" stroke="#ff80e0" stroke-width="1"/>
+    <rect x="6" y="7" width="6" height="6" fill="none" stroke="#ffffff" stroke-width="1.2" rx="1"/>
+    <rect x="4" y="5" width="6" height="6" fill="none" stroke="#ffffff" stroke-width="1.2" rx="1"/>
+  </g>
+  <g id="restore-pressed">
+    <circle cx="9" cy="9" r="8" fill="#ff80e0" stroke="#ff80e0" stroke-width="1"/>
+    <rect x="6" y="7" width="6" height="6" fill="none" stroke="#1a1a1b" stroke-width="1.2" rx="1"/>
+    <rect x="4" y="5" width="6" height="6" fill="#ff80e0" stroke="#1a1a1b" stroke-width="1.2" rx="1"/>
+  </g>
+  <g id="restore-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <rect x="6" y="7" width="6" height="6" fill="none" stroke="#777777" stroke-width="1.2" rx="1"/>
+    <rect x="4" y="5" width="6" height="6" fill="#2e2e2f" stroke="#777777" stroke-width="1.2" rx="1"/>
+  </g>
+
+  <!-- ============================================================
+       BUTTONS — Minimize
+       ============================================================ -->
+  <g id="minimize">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <line x1="5" y1="12" x2="13" y2="12" stroke="#ff80e0" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="minimize-hover">
+    <circle cx="9" cy="9" r="8" fill="url(#btnHoverGrad)" stroke="#ff80e0" stroke-width="1"/>
+    <line x1="5" y1="12" x2="13" y2="12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="minimize-pressed">
+    <circle cx="9" cy="9" r="8" fill="#ff80e0" stroke="#ff80e0" stroke-width="1"/>
+    <line x1="5" y1="12" x2="13" y2="12" stroke="#1a1a1b" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="minimize-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <line x1="5" y1="12" x2="13" y2="12" stroke="#777777" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============================================================
+       BUTTONS — Keep Above / Keep Below / Shade / Stick (on-top pin)
+       ============================================================ -->
+  <g id="keepabove">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <polyline points="5,12 9,6 13,12" fill="none" stroke="#ff80e0" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <g id="keepabove-hover">
+    <circle cx="9" cy="9" r="8" fill="url(#btnHoverGrad)" stroke="#ff80e0" stroke-width="1"/>
+    <polyline points="5,12 9,6 13,12" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <g id="keepabove-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <polyline points="5,12 9,6 13,12" fill="none" stroke="#777777" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+
+  <g id="keepbelow">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <polyline points="5,6 9,12 13,6" fill="none" stroke="#ff80e0" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <g id="keepbelow-hover">
+    <circle cx="9" cy="9" r="8" fill="url(#btnHoverGrad)" stroke="#ff80e0" stroke-width="1"/>
+    <polyline points="5,6 9,12 13,6" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <g id="keepbelow-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <polyline points="5,6 9,12 13,6" fill="none" stroke="#777777" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+
+  <g id="shade">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <line x1="5" y1="7" x2="13" y2="7" stroke="#ff80e0" stroke-width="1.5" stroke-linecap="round"/>
+    <polyline points="6,10 9,13 12,10" fill="none" stroke="#ff80e0" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+  <g id="shade-hover">
+    <circle cx="9" cy="9" r="8" fill="url(#btnHoverGrad)" stroke="#ff80e0" stroke-width="1"/>
+    <line x1="5" y1="7" x2="13" y2="7" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    <polyline points="6,10 9,13 12,10" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+  <g id="shade-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <line x1="5" y1="7" x2="13" y2="7" stroke="#777777" stroke-width="1.5" stroke-linecap="round"/>
+    <polyline points="6,10 9,13 12,10" fill="none" stroke="#777777" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- on-top / sticky (alldesktops) -->
+  <g id="alldesktops">
+    <circle cx="9" cy="9" r="8" fill="#3d3d3e" stroke="#ff80e0" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="9" cy="9" r="3" fill="none" stroke="#ff80e0" stroke-width="1.5"/>
+    <line x1="9" y1="3" x2="9" y2="6" stroke="#ff80e0" stroke-width="1.2"/>
+    <line x1="9" y1="12" x2="9" y2="15" stroke="#ff80e0" stroke-width="1.2"/>
+    <line x1="3" y1="9" x2="6" y2="9" stroke="#ff80e0" stroke-width="1.2"/>
+    <line x1="12" y1="9" x2="15" y2="9" stroke="#ff80e0" stroke-width="1.2"/>
+  </g>
+  <g id="alldesktops-hover">
+    <circle cx="9" cy="9" r="8" fill="url(#btnHoverGrad)" stroke="#ff80e0" stroke-width="1"/>
+    <circle cx="9" cy="9" r="3" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <line x1="9" y1="3" x2="9" y2="6" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="9" y1="12" x2="9" y2="15" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="3" y1="9" x2="6" y2="9" stroke="#ffffff" stroke-width="1.2"/>
+    <line x1="12" y1="9" x2="15" y2="9" stroke="#ffffff" stroke-width="1.2"/>
+  </g>
+  <g id="alldesktops-inactive">
+    <circle cx="9" cy="9" r="8" fill="#2e2e2f" stroke="#555555" stroke-width="1"/>
+    <circle cx="9" cy="9" r="3" fill="none" stroke="#777777" stroke-width="1.5"/>
+  </g>
+
+</svg>

@@ -1,4 +1,4 @@
-[kdeglobals][Icons]
+[Icons]
 Theme=HanabieNeonIcons
 
 [KDE]
@@ -8,6 +8,6 @@ LookAndFeelPackage=org.ookami.hanabie
 [LoginManager]
 Theme=eucalyptus-drop
 
-[org.kde.image][General]
+[Wallpaper]
 Image=hanabie-galaxy.jpg
 

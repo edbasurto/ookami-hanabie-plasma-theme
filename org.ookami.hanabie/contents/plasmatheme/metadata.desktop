@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Hanabie
+Comment=Hanabie Plasma Shell Theme for KDE Plasma 6
+X-KDE-PluginInfo-Author=Ookami
+X-KDE-PluginInfo-Name=Hanabie
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-ServiceTypes=Plasma/Theme
+Type=Service

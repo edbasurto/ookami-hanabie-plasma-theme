@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Hanabie
+Comment=Hanabie window decoration for KDE Plasma 6
+X-KDE-PluginInfo-Author=Ookami
+X-KDE-PluginInfo-Name=Hanabie
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL
+X-KDE-ServiceTypes=KWin/Decoration
+Type=Service

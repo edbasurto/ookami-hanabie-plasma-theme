@@ -7,8 +7,11 @@ Theme=HanabieNeonIcons
 [Colors]
 ColorScheme=HanabieColors
 
+[Plasma]
+Theme=Hanabie
+
 [Windows]
-Theme=placeholder
+Theme=__aurorae__svg__Hanabie
 
 [SplashScreen]
 Theme=BeautifulTreeAnimation
